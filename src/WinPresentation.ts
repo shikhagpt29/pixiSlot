@@ -1,5 +1,7 @@
+import * as PIXI from "pixi.js";
 import {SlotModel} from "./SlotModel";
 import {SlotClass} from "./SlotClass";
+import {Symbol} from "./view/Symbol";
 
 export interface IPayLine {
     sym: string,
@@ -20,9 +22,11 @@ export class WinPresentation {
     public showReelArea(): void {
         let updatedReels: string[][] = SlotClass.generatePos.createReels();
         for (let reelId: number = 0; reelId < 5; reelId++) {
+            SlotClass.gameScreen.reels[reelId].removeChildren();
             for (let symId: number = 0; symId < 3; symId++) {
-                let symbol: PIXI.Container = SlotClass.gameScreen.reels[reelId].getChildAt(symId) as PIXI.Container;
-                ( symbol!.getChildAt(0) as PIXI.Sprite )!.texture = SlotClass.assetLoader.resources[updatedReels[reelId][symId]].texture;
+                let sprite: Symbol = new Symbol(updatedReels[reelId][symId]);
+                sprite.position.y = symId * 128 + 10 * symId;
+                SlotClass.gameScreen.reels[reelId].addChild(sprite);
             }
         }
     }

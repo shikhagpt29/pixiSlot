@@ -1,7 +1,7 @@
 /**
  * Created by shikha on 2022-04-09.
  */
-
+import * as PIXI from "pixi.js";
 export class SlotApplication {
 
     public stage: PIXI.Container;

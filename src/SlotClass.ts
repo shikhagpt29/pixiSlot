@@ -1,7 +1,7 @@
 /**
  * Created by shikha on 2022-04-09.
  */
-
+import * as PIXI from "pixi.js";
 import {SlotApplication} from "./SlotApplication";
 import {PreLoadScreen} from "./view/PreLoadScreen";
 import {GameScreen} from "./view/GameScreen";

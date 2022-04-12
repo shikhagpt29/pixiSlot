@@ -1,6 +1,6 @@
 import {Button} from "../Button";
 import {SlotClass} from "../SlotClass";
-
+import * as PIXI from "pixi.js";
 export class PreLoadScreen extends PIXI.Container {
     private _loadingText: PIXI.Text;
     private _continueButton: Button;

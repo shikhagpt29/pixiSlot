@@ -1,3 +1,4 @@
+import * as PIXI from "pixi.js";
 import {Symbol} from "./Symbol";
 
 export class ReelView extends PIXI.Container {

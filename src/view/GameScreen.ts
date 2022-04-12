@@ -1,3 +1,4 @@
+import * as PIXI from "pixi.js";
 import {Button} from "../Button";
 import {SlotClass} from "../SlotClass";
 import {ReelView} from "./ReelView";
@@ -12,7 +13,7 @@ export class GameScreen extends PIXI.Container {
         super();
         this.initGraphics();
         this.visible = false;
-        this.position.set(100,100);
+        this.position.set(100, 100);
     }
 
     public show(): void {
@@ -45,9 +46,9 @@ export class GameScreen extends PIXI.Container {
 
     private showWin(): void {
         let winData: IWinComb = SlotClass.updateWin.checkWinCombinations();
-        let addText = "";
-        let text = "";
-        const totalWin = winData.totalWin;
+        let addText: string = "";
+        let text: string = "";
+        const totalWin: number = winData.totalWin;
         const winCombinations = winData.winCombinations;
         if (totalWin) {
             text = "Total win  : " + totalWin;

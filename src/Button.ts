@@ -1,9 +1,9 @@
-import {Container} from "@pixi/display";
+import * as PIXI from "pixi.js";
 
-export class Button extends Container {
+export class Button extends PIXI.Container {
     constructor(name:string){
         super();
-        this.interactiveChildren = true;
+        this.interactive = true;
         this.buttonMode = true;
         this.name = name;
         this.position.set(10, 137);

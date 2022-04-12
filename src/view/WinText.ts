@@ -1,3 +1,4 @@
+import * as PIXI from "pixi.js";
 export class WinText extends PIXI.Container{
     private _winText:PIXI.Text;
     constructor(){

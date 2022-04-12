@@ -33,4 +33,5 @@ export class SlotModel {
             'lv4': {3: 10, 4: 20, 5: 50}
         };
     }
+
 }
