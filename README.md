@@ -1,0 +1,2 @@
+# pixiSlot
+slot
